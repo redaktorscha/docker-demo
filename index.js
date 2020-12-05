@@ -1,3 +1,7 @@
+/**
+ * @module ./index.js
+ */
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import {
@@ -8,6 +12,9 @@ import http from 'http';
 
 import appSrc from './app.js';
 
+/**
+ * main entry point
+ */
 
 (() => {
 
