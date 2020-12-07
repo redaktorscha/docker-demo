@@ -19,10 +19,13 @@ import appSrc from './app.js';
 (() => {
 
     const PORT = process.env.PORT || 3000;
+    const HOST = '0.0.0.0';
 
 
     const app = appSrc(express, bodyParser, createReadStream, crypto, http);
 
-    app.listen(PORT, console.log(`Listening at ${PORT}, PID: ${process.pid}`));
+    app.listen(PORT, HOST, () => {
+        console.log(`Listening at ${HOST}, port ${PORT}, PID: ${process.pid}`)
+    });
 
 })()
